@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: theme.colors.gray[800],
+        backgroundColor: theme.colors.black,
     },
     text: {
         fontFamily: theme.fontFamily.regular,

@@ -27,7 +27,7 @@ const Layout = () => {
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
       <StatusBar barStyle="light-content" />
-     {fontsLoaded && <Slot />}
+      {fontsLoaded && <Slot />}
     </GestureHandlerRootView>
   );
 };

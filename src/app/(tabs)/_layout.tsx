@@ -34,18 +34,21 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="profile"
-        options={{
-          tabBarIcon: () => (
-            <Avatar />
-          ),
-        }}
-      />
-      <Tabs.Screen
         name="messages"
         options={{
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="chatbubble-ellipses" color={color} size={size} />
+          ),
+        }}
+      />
+        <Tabs.Screen
+        name="profile"
+        options={{
+          tabBarIcon: ({ color }) => (
+            <Avatar
+              selected = {color === theme.colors.white}
+              source={{ uri: "https://github.com/luixgabriel.png" }}
+            />
           ),
         }}
       />
