@@ -1,10 +1,14 @@
 import {View, StyleSheet, Text} from 'react-native'
 import { theme } from '@/theme'
+import Filters from '../../components/Filters'
+import { FILTERS } from '../../utils/filters'
+import { useState } from 'react'
 
 export default function Home(){
+    const [filter, setFilter] = useState<string>(FILTERS[0])
     return (
         <View style={styles.container}>
-            <Text style={styles.text}>Hello world</Text>
+            <Filters filters={FILTERS} filter={filter} onChange={setFilter} />
         </View>
     )
 }
@@ -12,8 +16,6 @@ export default function Home(){
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
         backgroundColor: theme.colors.black,
     },
     text: {
