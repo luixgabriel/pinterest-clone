@@ -1,5 +1,4 @@
 import { Slot } from "expo-router";
-import { StatusBar } from "react-native";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import {
   Roboto_400Regular,
@@ -8,6 +7,7 @@ import {
   useFonts,
 } from "@expo-google-fonts/roboto";
 import * as SplashScreen from 'expo-splash-screen';
+import { StatusBar } from "expo-status-bar";
 
 //SplashScreen seria algo como tela inicial ou  a primeira tela da sua aplicação
 SplashScreen.preventAutoHideAsync();
@@ -25,8 +25,8 @@ const Layout = () => {
   }
 
   return (
-    <GestureHandlerRootView style={{ flex: 1 }}>
-      <StatusBar hidden />
+    <GestureHandlerRootView style={{ flex: 1 , marginTop: 25}}>
+      <StatusBar style="auto" />
       {fontsLoaded && <Slot />}
     </GestureHandlerRootView>
   );
