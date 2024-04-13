@@ -7,7 +7,7 @@ import {
   useFonts,
 } from "@expo-google-fonts/roboto";
 import * as SplashScreen from 'expo-splash-screen';
-import { StatusBar } from "expo-status-bar";
+import { StatusBar } from "react-native";
 
 //SplashScreen seria algo como tela inicial ou  a primeira tela da sua aplicação
 SplashScreen.preventAutoHideAsync();
@@ -25,8 +25,8 @@ const Layout = () => {
   }
 
   return (
-    <GestureHandlerRootView style={{ flex: 1 , marginTop: 25}}>
-      <StatusBar style="auto" />
+    <GestureHandlerRootView style={{ flex: 1}}>
+       <StatusBar barStyle="light-content" />
       {fontsLoaded && <Slot />}
     </GestureHandlerRootView>
   );

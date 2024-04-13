@@ -4,7 +4,7 @@ import { theme } from '@/theme'
 export default function Search(){
     return (
         <View style={styles.container}>
-            <Text style={styles.text}>Hello world</Text>
+            <Text style={styles.text}>Search</Text>
         </View>
     )
 }
@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: theme.colors.gray[800],
+        backgroundColor: theme.colors.black,
     },
     text: {
         fontFamily: theme.fontFamily.regular,
